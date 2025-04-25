@@ -6,8 +6,8 @@ const StyledHeading = styled.h1`
   color: teal;
 `;
 
-const Heading = () => {
-  return <StyledHeading>This is going to be a word search</StyledHeading>;
+const Heading = ({ children }) => {
+  return <StyledHeading>{children}</StyledHeading>;
 };
 
 export default Heading;
