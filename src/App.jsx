@@ -1,11 +1,12 @@
 import "./App.css";
 import Heading from "./components/Heading";
+import Grid from "./components/Grid";
 
 function App() {
   return (
     <>
-      <Heading>This is going to be a word search</Heading>
-      <p>There will be a grid of letters and everything!!</p>
+      <Heading>Word Search</Heading>
+      <Grid />
     </>
   );
 }
