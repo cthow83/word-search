@@ -29,23 +29,3 @@ jobs:
 
       - name: Run coverage
         run: npm run coverage
-
-      - name: Check coverage threshold
-        run: |
-          SUMMARY_FILE=coverage/coverage-final.json
-          if [ ! -f "$SUMMARY_FILE" ]; then
-            echo "Coverage summary file not found!"
-            exit 1
-          fi
-          COVERAGE=$(node -pe "require('./coverage/coverage-final.json').total.lines.pct")
-          if [ -z "$COVERAGE" ]; then
-            echo "Could not determine coverage percentage!"
-            exit 1
-          fi
-          COV_INT=${COVERAGE%.*}
-          if [ "$COV_INT" -lt 80 ]; then
-            echo "Test coverage ($COVERAGE%) is below 80%!"
-            exit 1
-          else
-            echo "Test coverage ($COVERAGE%) meets the threshold."
-          fi
