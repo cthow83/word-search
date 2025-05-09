@@ -32,8 +32,18 @@ jobs:
 
       - name: Check coverage threshold
         run: |
-          COVERAGE=$(npx vitest run --coverage --reporter=json-summary --silent | grep 'lines' | awk '{print $2}' | tr -d '%')
-          if [ "$(echo "$COVERAGE < 80" | bc)" -eq 1 ]; then
+          SUMMARY_FILE=coverage/coverage-summary.json
+          if [ ! -f "$SUMMARY_FILE" ]; then
+            echo "Coverage summary file not found!"
+            exit 1
+          fi
+          COVERAGE=$(node -pe "require('./coverage/coverage-summary.json').total.lines.pct")
+          if [ -z "$COVERAGE" ]; then
+            echo "Could not determine coverage percentage!"
+            exit 1
+          fi
+          COV_INT=${COVERAGE%.*}
+          if [ "$COV_INT" -lt 80 ]; then
             echo "Test coverage ($COVERAGE%) is below 80%!"
             exit 1
           else
