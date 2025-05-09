@@ -29,3 +29,6 @@ jobs:
 
       - name: Run coverage
         run: npm run coverage
+
+      - name: Check coverage thresholds
+        run: node check-coverage.js
