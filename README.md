@@ -1,12 +1,46 @@
-# React + Vite
+> **Note:** This project is a work in progress. Not all features are currently implemented.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+# Word Search Puzzle Generator (React + Vite)
 
-Currently, two official plugins are available:
+This project is a web application for generating and playing word search puzzles. Built with React and Vite, it provides an interactive interface for users to create, customize, and solve word search grids. The app features:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Dynamic word search grid generation
+- Customizable word lists
+- Responsive and user-friendly UI
+- Real-time puzzle solving and highlighting
+- Modern React component structure
 
-## Expanding the ESLint configuration
+## Getting Started
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. **Install dependencies:**
+   ```sh
+   npm install
+   ```
+2. **Run the development server:**
+   ```sh
+   npm run dev
+   ```
+3. **Run tests:**
+   ```sh
+   npm test
+   ```
+
+## Project Structure
+
+- `src/components/` – React components for the grid, heading, and word list
+- `src/helpers/` – Utility functions for generating and managing word search puzzles
+- `src/App.jsx` – Main application component
+
+## Roadmap & Upcoming Features
+
+We are committed to making this word search generator as accessible and customizable as possible. Here are some exciting features planned for future releases:
+
+- **Font Variety & Accessibility:** Choose from a range of fonts—including a dyslexia-friendly option—to ensure every user can enjoy the puzzles comfortably.
+- **Customizable Backgrounds:** Select from multiple background colors designed to support children with learning differences and reading challenges, enhancing both comfort and focus.
+- **Personalized Word Lists:** Enter your own set of up to 10 words and instantly generate a unique word search puzzle tailored to your preferences or educational needs.
+
+Stay tuned for these enhancements and more as we continue to improve the experience for all users!
+
+## License
+
+MIT
