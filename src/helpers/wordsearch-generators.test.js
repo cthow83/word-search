@@ -2,7 +2,7 @@ import { describe, it, expect } from "vitest";
 import {
   generateRandomLetters,
   generateStaticLetters,
-  // wordList,
+  wordList,
 } from "./wordsearch-generators";
 
 describe("wordsearch-generators", () => {
@@ -24,20 +24,20 @@ describe("wordsearch-generators", () => {
     });
   });
 
-  // it("wordList returns the expected list of words", () => {
-  //   const words = wordList();
-  //   expect(Array.isArray(words)).toBe(true);
-  //   expect(words).toEqual([
-  //     "BUNNY",
-  //     "DUCKLINGS",
-  //     "BONNET",
-  //     "HOTCROSSBUNS",
-  //     "DAFFODILS",
-  //     "EASTEREGG",
-  //     "HYACINTH",
-  //     "LAMBS",
-  //     "IRIS",
-  //     "JELLYBEANS",
-  //   ]);
-  // });
+  it("wordList returns the expected list of words", () => {
+    const words = wordList();
+    expect(Array.isArray(words)).toBe(true);
+    expect(words).toEqual([
+      "BUNNY",
+      "DUCKLINGS",
+      "BONNET",
+      "HOTCROSSBUNS",
+      "DAFFODILS",
+      "EASTEREGG",
+      "HYACINTH",
+      "LAMBS",
+      "IRIS",
+      "JELLYBEANS",
+    ]);
+  });
 });
