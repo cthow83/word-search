@@ -12,6 +12,7 @@ export default defineConfig({
         "src/**/*.spec.*",
         "src/**/__tests__/**",
       ],
+      reporter: ["text", "json", "html"],
     },
   },
   esbuild: {
