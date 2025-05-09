@@ -1,6 +1,6 @@
 import React from "react";
 import styled from "styled-components";
-import generateRandomLetters from "../helpers/generate-random-letters";
+import { generateStaticLetters } from "../helpers/wordsearch-generators";
 
 const GridTable = styled.div`
   display: grid;
@@ -14,12 +14,12 @@ const GridCell = styled.div`
   height: 20px;
 `;
 
-const randomLetters = generateRandomLetters();
+const staticLetters = generateStaticLetters();
 
 const Grid = () => {
   return (
     <GridTable>
-      {randomLetters.map((letter, index) => (
+      {staticLetters.map((letter, index) => (
         <GridCell key={index}>{letter}</GridCell>
       ))}
     </GridTable>
