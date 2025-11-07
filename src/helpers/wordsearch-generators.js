@@ -216,16 +216,16 @@ export const generateStaticLetters = () => {
 
 export const wordList = () => {
   const words = [
-    "BUNNY",
-    "DUCKLINGS",
-    "BONNET",
-    "HOTCROSSBUNS",
-    "DAFFODILS",
-    "EASTEREGG",
-    "HYACINTH",
-    "LAMBS",
-    "IRIS",
-    "JELLYBEANS",
+    "Information",
+    "Sensation",
+    "Preparation",
+    "Vibration",
+    "Decoration",
+    "Donation",
+    "Duration",
+    "Registration",
+    "Population",
+    "Determination",
   ];
   return words;
 };
