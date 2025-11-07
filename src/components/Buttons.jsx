@@ -7,11 +7,14 @@ const ButtonWrapper = styled.div`
   font-size: 12px;
   justify-content: center;
   color: teal;
+  max-width: 350px;
+  flex-wrap: wrap;
   @media print {
     display: none !important;
   }
   @media (min-width: 600px) {
     font-size: 16px;
+    max-width: 500px;
   }
 `;
 
@@ -31,11 +34,11 @@ const Buttons = (props) => {
           setColorIndex={props.setColorIndex}
           colorIndex={props.colorIndex}
         />
+        <SwapFontButton
+          swapFont={props.swapFont}
+          useDyslexicFont={props.useDyslexicFont}
+        />
       </ButtonWrapper>
-      <SwapFontButton
-        swapFont={props.swapFont}
-        useDyslexicFont={props.useDyslexicFont}
-      />
     </>
   );
 };
