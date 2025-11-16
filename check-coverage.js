@@ -10,10 +10,10 @@ const __filename = fileURLToPath(import.meta.url);
 const __dirname = path.dirname(__filename);
 
 const thresholds = {
-  lines: 0,
-  statements: 0,
-  functions: 0,
-  branches: 0,
+  lines: 100,
+  statements: 100,
+  functions: 100,
+  branches: 100,
 };
 
 const coveragePath = path.join(__dirname, "coverage", "coverage-final.json");
