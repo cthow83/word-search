@@ -216,16 +216,16 @@ export const generateStaticLetters = () => {
 
 export const wordList = () => {
   const words = [
-    "Information",
-    "Sensation",
-    "Preparation",
-    "Vibration",
-    "Decoration",
-    "Donation",
-    "Duration",
-    "Registration",
-    "Population",
-    "Determination",
+    "adoration",
+    "admiration",
+    "coronation",
+    "detonation",
+    "observation",
+    "location",
+    "generation",
+    "exploration",
+    "combination",
+    "illustration",
   ];
   return words;
 };
